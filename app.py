@@ -46,29 +46,29 @@ st.title("Byteshift AI client integration")
 with st.form(key='ai_automation_form'):
     # Question 1: Client name
     st.markdown('<p class="question-text">1. Who is the team member we will be working with?</p>', unsafe_allow_html=True)
-    client_name = st.text_input("", placeholder="First Name")
-    client_email = st.text_input("", placeholder="Email Address")
-    company_name = st.text_input("", placeholder="Name of your company")
+    client_name = st.text_input("enter text", placeholder="First Name",label_visibility='hidden')
+    client_email = st.text_input("enter text", placeholder="Email Address",label_visibility='hidden')
+    company_name = st.text_input("enter text", placeholder="Name of your company", label_visibility='hidden')
     
     # Question 2: Project description
     st.markdown('<p class="question-text">2. From our previous meetings, please briefly outline your expectations of the service/outcome we are delivering:</p>', unsafe_allow_html=True)
-    project_description = st.text_area("", placeholder="e.g., 80% of our customer service staff's time is saved from engaging with capturing client information")
+    project_description = st.text_area("enter text", placeholder="e.g., 80% of our customer service staff's time is saved from engaging with capturing client information")
 
     # Question 3: AI exposure
     st.markdown('<p class="question-text">3. Do you have any experience with AI ?:</p>', unsafe_allow_html=True)
-    ai_experience = st.text_area("", placeholder="if yes, please breifly tell us, good or bad.")
+    ai_experience = st.text_area("enter text", placeholder="if yes, please breifly tell us, good or bad.",label_visibility='hidden')
     
     # Question 4: Industry type
     st.markdown('<p class="question-text">4. Please select your industry:</p>', unsafe_allow_html=True)
-    industry_type = st.selectbox("", options=["Technology", "Healthcare", "Finance", "Ecommerce", "Law", "Trade Services", "Other"], index=0)
+    industry_type = st.selectbox("enter text", options=["Technology", "Healthcare", "Finance", "Ecommerce", "Law", "Trade Services", "Other"], index=0)
 
     #Question 5: outline deadlines 
     st.markdown('<p class="question-text">5. Please confirm the final deadline for this project based on our previous meetings:</p>', unsafe_allow_html=True)
-    deadline = st.date_input("", format = "DD/MM/YYYY")
+    deadline = st.date_input("")
 
     ##Question 6: other important notes
     st.markdown('<p class="question-text">6. If there is any other information you would like us to know, please enter here:</p>', unsafe_allow_html=True)
-    notes = st.text_area("", placeholder= "Questions, requests etc")
+    notes = st.text_area("enter text", placeholder= "Questions, requests etc",label_visibility='hidden')
     
     ##break in form - for Website chatbots only
     st.divider()
@@ -77,7 +77,7 @@ with st.form(key='ai_automation_form'):
     # Question 7.: chatbot hosting
     st.markdown('<p class="question-text-head">7. Where is your website located ? (wordpress, shopify etc).</p>',unsafe_allow_html=True)
     st.markdown('<p class="question-text"> We ask our clients to add us as admins into their website or hosting platforms so that we can integrate our solutions on your behalf. We will contact the person nominated above in regards to access (leave blank if not applicable)</p>', unsafe_allow_html=True)
-    website_host = st.text_area("")
+    website_host = st.text_area("enter text",label_visibility='hidden')
 
 
     
